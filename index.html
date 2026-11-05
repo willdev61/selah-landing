@@ -3,521 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selah - Application de méditation biblique pour chrétiens francophones d'Afrique avec Strong's Concordance intégré">
-    <meta name="keywords" content="Bible, méditation, Strong's Concordance, chrétiens francophones, Afrique, étude biblique">
-    <title>Selah - Pause. Médite. Transforme.</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Selah · Marquez une pause avec la Parole</title>
+    <meta name="description" content="Selah, application mobile de lecture et de méditation biblique pour les chrétiens francophones. Plusieurs traductions françaises, comparaison de versions, recherche, méditation guidée, entièrement hors ligne.">
+    <meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B0D10" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="Selah · Marquez une pause avec la Parole">
+    <meta property="og:description" content="Lecture, comparaison et méditation de la Bible en français, hors ligne.">
+    <meta property="og:image" content="https://willdev61.github.io/selah-landing/assets/screens/lecteur.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Geist+Mono:wght@400;500&family=Geist:wght@200;300;400;500;600&family=Noto+Serif+Hebrew:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <span class="logo-text">SELAH</span>
-                    <span class="logo-tagline">Pause. Médite. Transforme.</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#about">À propos</a>
-                    <a href="#features">Fonctionnalités</a>
-                    <a href="#tech">Technologies</a>
-                    <a href="#screenshots">Aperçu</a>
-                    <a href="#partnership">Partenariat</a>
-                    <a href="#contact" class="btn-primary">Contact</a>
-                </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <a class="skip" href="#contenu">Aller au contenu</a>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="title-main">SELAH</span>
-                        <span class="title-sub">Méditation Biblique</span>
-                    </h1>
-                    <p class="hero-tagline">"Pause. Médite. Transforme."</p>
-                    <p class="hero-description">
-                        Application mobile de méditation biblique avec <strong>Strong's Concordance intégré</strong> 
-                        pour les chrétiens francophones d'Afrique
+    <header class="nav">
+        <div class="wrap nav__inner">
+            <a href="#" class="wordmark" aria-label="Selah, accueil">
+                <span>Selah</span><i aria-hidden="true"></i><i aria-hidden="true"></i>
+            </a>
+            <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+                <span></span><span></span>
+            </button>
+            <nav id="menu" class="nav__links" aria-label="Navigation principale">
+                <a href="#fonctionnalites">Fonctionnalités</a>
+                <a href="#apercu">Aperçu</a>
+                <a href="#technique">Technique</a>
+                <a href="#partenariat">Partenariat</a>
+                <a href="#contact" class="pill pill--ink">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenu">
+        <!-- Ouverture -->
+        <section class="hero">
+            <div class="hero__ghost" aria-hidden="true">סֶלָה</div>
+            <div class="wrap hero__grid">
+                <div class="hero__text">
+                    <p class="eyebrow">Application mobile · Version de test</p>
+                    <h1 class="hero__title">Marquez une pause<br><em>avec la Parole.</em></h1>
+                    <p class="hero__lead">
+                        Selah est une application de lecture et de méditation biblique pour les chrétiens
+                        francophones, pensée d’abord pour l’Afrique de l’Ouest. Elle fonctionne entièrement
+                        hors ligne.
                     </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">31,102</span>
-                            <span class="stat-label">Versets</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">~13,000</span>
-                            <span class="stat-label">Définitions Strong's</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Offline</span>
-                        </div>
+                    <div class="hero__cta">
+                        <a href="#apercu" class="cta">Voir l’application <span class="cta__dot" aria-hidden="true">→</span></a>
+                        <a href="#partenariat" class="pill">Partenariat Lueur.org</a>
                     </div>
-                    <div class="hero-cta">
-                        <a href="#features" class="btn-primary btn-large">Découvrir les fonctionnalités</a>
-                        <a href="#tech" class="btn-secondary btn-large">Architecture technique</a>
-                    </div>
+                    <dl class="figures">
+                        <div><dt>Versets par traduction</dt><dd>31 102</dd></div>
+                        <div><dt>Livres</dt><dd>66</dd></div>
+                        <div><dt>Hors ligne</dt><dd>100 %</dd></div>
+                    </dl>
                 </div>
-                <div class="hero-image">
-                    <div class="phone-mockup">
-                        <div class="phone-frame">
-                            <div class="phone-screen">
-                                <div class="app-preview">
-                                    <div class="app-header">
-                                        <div class="app-icon">📖</div>
-                                        <span>Jean 3:16</span>
-                                    </div>
-                                    <div class="app-verse">
-                                        <p class="verse-text">
-                                            Car <span class="strong-word">Dieu</span> a tant aimé le monde qu'il a donné 
-                                            son <span class="strong-word">Fils</span> unique...
-                                        </p>
-                                    </div>
-                                    <div class="app-strong">
-                                        <div class="strong-badge">H430</div>
-                                        <div class="strong-def">
-                                            <strong>אֱלֹהִים</strong> (elohim)<br>
-                                            <small>Dieu, dieux, juge</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="hero__phones" aria-hidden="true">
+                    <figure class="phone phone--back"><img src="assets/screens/accueil.webp" alt="" width="540" height="1200"></figure>
+                    <figure class="phone phone--front"><img src="assets/screens/lecteur.webp" alt="" width="540" height="1200"></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission -->
+        <section class="section" id="mission">
+            <div class="wrap">
+                <div class="head">
+                    <p class="eyebrow">Notre mission</p>
+                    <h2>Lire, comprendre, méditer. <em>Sans connexion.</em></h2>
+                </div>
+                <div class="cards cards--3">
+                    <article class="card reveal">
+                        <span class="card__glyph" aria-hidden="true">◎</span>
+                        <h3>Pour l’Afrique francophone</h3>
+                        <p>Conçue à Abidjan pour les lecteurs d’Afrique de l’Ouest, là où les ressources d’étude biblique en français restent rares.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card__glyph card__glyph--hebrew" aria-hidden="true">אֱלֹהִים</span>
+                        <h3>Revenir au texte original</h3>
+                        <p>Les fiches Strong donnent, pour un mot hébreu ou grec, sa forme originale, sa translittération, sa prononciation et sa définition en français.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="card__glyph" aria-hidden="true">⌁</span>
+                        <h3>Entièrement hors ligne</h3>
+                        <p>Toute la Bible est stockée sur le téléphone. Aucune donnée mobile n’est nécessaire pour lire, chercher ou méditer.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section class="section section--tint" id="fonctionnalites">
+            <div class="wrap">
+                <div class="head">
+                    <p class="eyebrow">Fonctionnalités</p>
+                    <h2>Ce que l’application fait <em>aujourd’hui.</em></h2>
+                </div>
+                <div class="cards cards--3">
+                    <article class="card reveal">
+                        <h3>Lecture</h3>
+                        <ul>
+                            <li>Louis Segond 1910, Martin 1744 et Ostervald 1996</li>
+                            <li>Navigation par livre, chapitre et verset</li>
+                            <li>Reprise de la lecture là où vous l’avez laissée</li>
+                            <li>Taille du texte, interligne, ambiances jour, nuit et sépia</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Comparaison de versions</h3>
+                        <ul>
+                            <li>Plusieurs traductions côte à côte, pour un verset ou un chapitre</li>
+                            <li>Mots qui diffèrent de la Louis Segond mis en évidence</li>
+                            <li>Passage d’une version à l’autre d’un simple glissement</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Recherche</h3>
+                        <ul>
+                            <li>Recherche plein texte dans toute la Bible</li>
+                            <li>Insensible aux accents : « lumiere » trouve « lumière »</li>
+                            <li>Filtre Ancien ou Nouveau Testament</li>
+                            <li>Recherche dans les fiches Strong par mot ou par numéro</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Méditation</h3>
+                        <ul>
+                            <li>Verset du jour</li>
+                            <li>Minuteur de 3, 5 ou 10 minutes avec respiration guidée</li>
+                            <li>Questions de réflexion</li>
+                            <li>Notes de méditation</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Annotations</h3>
+                        <ul>
+                            <li>Surlignage en sept couleurs</li>
+                            <li>Favoris et notes sur un ou plusieurs versets</li>
+                            <li>Partage d’un verset ou d’un passage</li>
+                        </ul>
+                    </article>
+                    <article class="card reveal">
+                        <h3>Progression</h3>
+                        <ul>
+                            <li>Plans de lecture : Psaumes en 30 jours, Évangiles en 40 jours</li>
+                            <li>Séries de jours de lecture consécutifs</li>
+                            <li>Historique et statistiques de lecture</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <article class="card card--wide reveal">
+                    <div>
+                        <p class="tag">En cours</p>
+                        <h3>Concordance Strong</h3>
+                        <p>
+                            Les fiches Strong et leur recherche sont en place, avec un premier échantillon de mots.
+                            L’étape suivante est d’intégrer le dictionnaire complet et un texte biblique annoté des
+                            numéros Strong, pour que chaque mot du lecteur devienne cliquable. C’est l’objet du
+                            partenariat avec Lueur.org.
+                        </p>
+                    </div>
+                    <figure class="phone phone--small"><img src="assets/screens/strong.webp" alt="Fiche Strong H430, elohim, en hébreu avec sa translittération, sa prononciation et sa définition" width="540" height="1200" loading="lazy"></figure>
+                </article>
+            </div>
+        </section>
+
+        <!-- Aperçu -->
+        <section class="section" id="apercu">
+            <div class="wrap">
+                <div class="head">
+                    <p class="eyebrow">Aperçu</p>
+                    <h2>Captures de la version <em>actuelle.</em></h2>
+                    <p class="head__note">Android, novembre 2026.</p>
+                </div>
+            </div>
+            <div class="gallery" tabindex="0" aria-label="Captures d’écran, faire défiler horizontalement">
+                <figure class="shot"><div class="phone"><img src="assets/screens/accueil.webp" alt="Accueil : verset du jour, reprise de la lecture et accès rapide" width="540" height="1200" loading="lazy"></div><figcaption>Accueil</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/lecteur.webp" alt="Lecteur : Genèse 1 en Louis Segond 1910, verset 3 surligné" width="540" height="1200" loading="lazy"></div><figcaption>Lecteur</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/surlignage.webp" alt="Actions sur un verset : sept couleurs de surlignage, favori, note, partage, comparaison" width="540" height="1200" loading="lazy"></div><figcaption>Actions sur un verset</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/comparaison.webp" alt="Comparaison de Genèse 1 : Bible Martin 1744, mots différents de la Louis Segond surlignés" width="540" height="1200" loading="lazy"></div><figcaption>Comparaison de versions</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/recherche.webp" alt="Recherche du mot lumière : résultats dans la Genèse et l’Exode" width="540" height="1200" loading="lazy"></div><figcaption>Recherche</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/strong.webp" alt="Fiche Strong H430, elohim, 2 606 occurrences" width="540" height="1200" loading="lazy"></div><figcaption>Fiche Strong</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/meditation.webp" alt="Minuteur de méditation de 5 minutes avec le verset et une question de réflexion" width="540" height="1200" loading="lazy"></div><figcaption>Méditation</figcaption></figure>
+                <figure class="shot"><div class="phone"><img src="assets/screens/plans.webp" alt="Plans de lecture : Psaumes en 30 jours et Évangiles en 40 jours" width="540" height="1200" loading="lazy"></div><figcaption>Plans de lecture</figcaption></figure>
+            </div>
+        </section>
+
+        <!-- Technique -->
+        <section class="section section--tint" id="technique">
+            <div class="wrap">
+                <div class="head">
+                    <p class="eyebrow">Technique</p>
+                    <h2>Une base solide, <em>prête à recevoir les données.</em></h2>
+                </div>
+                <div class="tech">
+                    <dl class="stack">
+                        <div><dt>Application</dt><dd>React Native 0.88 · Expo SDK 58 · TypeScript strict</dd></div>
+                        <div><dt>Données</dt><dd>SQLite embarqué · index plein texte FTS5</dd></div>
+                        <div><dt>Navigation</dt><dd>React Navigation 7</dd></div>
+                        <div><dt>Organisation</dt><dd>Monorepo pnpm et Turborepo · application et logique métier séparées</dd></div>
+                        <div><dt>Qualité</dt><dd>Typage strict · ESLint · tests unitaires · migrations de schéma versionnées</dd></div>
+                    </dl>
+                    <div class="cards">
+                        <article class="card reveal">
+                            <h3>Hors ligne d’abord</h3>
+                            <p>Les traductions sont importées dans la base locale au premier lancement, en quelques secondes. Ensuite, plus aucun accès réseau n’est nécessaire.</p>
+                        </article>
+                        <article class="card reveal">
+                            <h3>Recherche instantanée</h3>
+                            <p>Un index plein texte couvre chaque verset de chaque traduction et ignore les accents.</p>
+                        </article>
+                        <article class="card reveal">
+                            <h3>Prête pour Strong</h3>
+                            <p>Le schéma prévoit déjà de relier chaque mot du texte à son numéro Strong. Les données de Lueur.org s’y insèrent sans modifier l’application.</p>
+                        </article>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Notre Mission</span>
-                <h2 class="section-title">Une application pour approfondir la Parole</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="card-icon">🌍</div>
-                    <h3>Pour l'Afrique francophone</h3>
-                    <p>Conçue spécifiquement pour les chrétiens d'Afrique de l'Ouest, avec une attention particulière à la Côte d'Ivoire</p>
+        <!-- Partenariat -->
+        <section class="section" id="partenariat">
+            <div class="wrap partner">
+                <div class="head">
+                    <p class="eyebrow">Partenariat</p>
+                    <h2>Avec <em>Lueur.org</em></h2>
                 </div>
-                <div class="about-card">
-                    <div class="card-icon">📚</div>
-                    <h3>Strong's Concordance</h3>
-                    <p>Chaque mot biblique cliquable révèle son sens original en hébreu ou grec, avec traduction française</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">📡</div>
-                    <h3>100% Offline</h3>
-                    <p>Fonctionne entièrement sans connexion internet, idéal pour les zones à connectivité limitée</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Fonctionnalités</span>
-                <h2 class="section-title">Tout pour une étude biblique approfondie</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Lecture de la Bible</h3>
-                    <ul class="feature-list">
-                        <li>Bible complète en français</li>
-                        <li>Navigation par livres et chapitres</li>
-                        <li>Historique de lecture</li>
-                        <li>Lecture optimisée</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Strong's Concordance</h3>
-                    <ul class="feature-list">
-                        <li>~13,000 définitions hébreu/grec</li>
-                        <li>Mots cliquables dans le texte</li>
-                        <li>Translittérations et prononciations</li>
-                        <li>Usages et occurrences</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Outils d'étude</h3>
-                    <ul class="feature-list">
-                        <li>Introductions aux livres bibliques</li>
-                        <li>Dictionnaire biblique intégré</li>
-                        <li>Références croisées</li>
-                        <li>Encyclopédie biblique</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🙏</div>
-                    <h3>Méditation</h3>
-                    <ul class="feature-list">
-                        <li>Timer de méditation configurable</li>
-                        <li>Verset du jour</li>
-                        <li>Questions de réflexion guidées</li>
-                        <li>Journal de méditation</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Outils personnels</h3>
-                    <ul class="feature-list">
-                        <li>Favoris et collections</li>
-                        <li>Surlignage (3 couleurs)</li>
-                        <li>Notes personnelles</li>
-                        <li>Plans de lecture</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Statistiques</h3>
-                    <ul class="feature-list">
-                        <li>Suivi de lecture quotidien</li>
-                        <li>Progression dans la Bible</li>
-                        <li>Streaks de lecture</li>
-                        <li>Temps de méditation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="tech" class="tech">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Technologies</span>
-                <h2 class="section-title">Architecture technique robuste</h2>
-            </div>
-            <div class="tech-content">
-                <div class="tech-diagram">
-                    <div class="tech-layer">
-                        <h4>Frontend Mobile</h4>
-                        <div class="tech-badges">
-                            <span class="badge">React Native 0.81</span>
-                            <span class="badge">Expo 54</span>
-                            <span class="badge">TypeScript 5.9</span>
-                        </div>
-                    </div>
-                    <div class="tech-layer">
-                        <h4>UI & Navigation</h4>
-                        <div class="tech-badges">
-                            <span class="badge">React Native Paper</span>
-                            <span class="badge">React Navigation 7</span>
-                            <span class="badge">Moti Animations</span>
-                        </div>
-                    </div>
-                    <div class="tech-layer">
-                        <h4>Base de données</h4>
-                        <div class="tech-badges">
-                            <span class="badge">SQLite</span>
-                            <span class="badge">31,102 versets</span>
-                            <span class="badge">~800,000 mots</span>
-                        </div>
-                    </div>
-                    <div class="tech-layer">
-                        <h4>Architecture</h4>
-                        <div class="tech-badges">
-                            <span class="badge">Monorepo (pnpm + Turbo)</span>
-                            <span class="badge">3 packages</span>
-                            <span class="badge">24+ services</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tech-highlights">
-                    <div class="highlight-card">
-                        <h4>Performance</h4>
-                        <p>Index optimisés pour des recherches instantanées dans la Bible</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h4>Offline-first</h4>
-                        <p>Toutes les données stockées localement en SQLite</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h4>Scalable</h4>
-                        <p>Architecture modulaire prête pour les futures fonctionnalités</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Aperçu de l'application</span>
-                <h2 class="section-title">Interface intuitive et contemplative</h2>
-            </div>
-            <div class="screenshots-grid">
-                <div class="screenshot-card">
-                    <div class="screenshot-mockup home">
-                        <div class="mockup-header">
-                            <span>9:41</span>
-                            <div class="status-icons"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <h3>🏠 Accueil</h3>
-                            <div class="mock-cards">
-                                <div class="mock-card">📖 Lire la Bible</div>
-                                <div class="mock-card">🙏 Méditer</div>
-                                <div class="mock-card">📚 Étudier</div>
-                                <div class="mock-card">⭐ Favoris</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="screenshot-label">Écran d'accueil</p>
-                </div>
-
-                <div class="screenshot-card">
-                    <div class="screenshot-mockup reader">
-                        <div class="mockup-header">
-                            <span>9:41</span>
-                            <div class="status-icons"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="mock-nav">← Jean 3 →</div>
-                            <div class="mock-verse">
-                                <span class="verse-num">16</span>
-                                <span class="verse-content">
-                                    Car <span class="strong">Dieu</span> a tant aimé le 
-                                    <span class="strong">monde</span>...
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="screenshot-label">Lecteur biblique</p>
-                </div>
-
-                <div class="screenshot-card">
-                    <div class="screenshot-mockup strong">
-                        <div class="mockup-header">
-                            <span>9:41</span>
-                            <div class="status-icons"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="strong-detail">
-                                <div class="strong-number">H430</div>
-                                <div class="strong-original">אֱלֹהִים</div>
-                                <div class="strong-trans">elohim</div>
-                                <div class="strong-def-text">
-                                    Dieu, dieux, juge, ange
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="screenshot-label">Définition Strong's</p>
-                </div>
-
-                <div class="screenshot-card">
-                    <div class="screenshot-mockup meditation">
-                        <div class="mockup-header">
-                            <span>9:41</span>
-                            <div class="status-icons"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="timer-display">
-                                <div class="timer-circle">5:00</div>
-                                <div class="timer-controls">▶️ Pause</div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="screenshot-label">Timer de méditation</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Design System Section -->
-    <section class="design-system">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Design</span>
-                <h2 class="section-title">Design contemplatif et chaleureux</h2>
-            </div>
-            <div class="design-content">
-                <div class="design-principle">
-                    <h3>Inspiration "YouVersion"</h3>
-                    <p>Combinaison d'images inspirantes, de chaleur spirituelle et d'une palette marron/or distinctive</p>
-                </div>
-                <div class="color-palette">
-                    <div class="color-swatch primary">
-                        <div class="color-box"></div>
-                        <div class="color-info">
-                            <strong>Marron Chocolat</strong>
-                            <span>#5C4033</span>
-                        </div>
-                    </div>
-                    <div class="color-swatch gold">
-                        <div class="color-box"></div>
-                        <div class="color-info">
-                            <strong>Or</strong>
-                            <span>#D4AF37</span>
-                        </div>
-                    </div>
-                    <div class="color-swatch background">
-                        <div class="color-box"></div>
-                        <div class="color-info">
-                            <strong>Crème</strong>
-                            <span>#FAF8F3</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partnership Section -->
-    <section id="partnership" class="partnership">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Partenariat</span>
-                <h2 class="section-title">En collaboration avec Lueur.org</h2>
-            </div>
-            <div class="partnership-content">
-                <div class="partnership-text">
+                <div class="partner__body">
                     <p class="lead">
-                        Nous sommes en discussion avec <strong>Lueur.org</strong> pour intégrer leurs données 
-                        Strong's Concordance en français dans l'application Selah.
+                        Selah prépare l’intégration des données Strong de
+                        <a href="https://www.lueur.org" rel="noopener">Lueur.org</a> : un texte biblique annoté
+                        des numéros Strong et le dictionnaire des définitions en français. Ce sont elles qui
+                        rendront chaque mot du lecteur cliquable vers son sens hébreu ou grec.
                     </p>
-                    <h3>Notre engagement</h3>
-                    <ul class="partnership-list">
-                        <li>✅ Architecture technique prête pour l'intégration</li>
-                        <li>✅ Attribution claire et visible de Lueur.org</li>
-                        <li>✅ Intégration estimée à 2-3 jours après réception des données</li>
-                        <li>✅ Respect strict des conditions d'utilisation</li>
-                        <li>✅ Mise à jour régulière des données</li>
-                    </ul>
-                </div>
-                <div class="partnership-stats">
-                    <div class="stat-box">
-                        <div class="stat-value">~13,000</div>
-                        <div class="stat-desc">Définitions Strong's attendues</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-value">2-3 jours</div>
-                        <div class="stat-desc">Durée d'intégration</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-value">24 services</div>
-                        <div class="stat-desc">Infrastructure prête</div>
-                    </div>
+                    <h3>Nos engagements</h3>
+                    <ol class="commitments">
+                        <li><span><strong>Attribution visible.</strong> Lueur.org est cité comme source dans l’application et sur ce site.</span></li>
+                        <li><span><strong>Conditions respectées.</strong> L’usage et la diffusion suivent les conditions fixées par Lueur.org.</span></li>
+                        <li><span><strong>Données sur l’appareil.</strong> Les données sont intégrées hors ligne, sans serveur intermédiaire.</span></li>
+                        <li><span><strong>Transparence.</strong> Une version de test est partagée avec Lueur.org à chaque étape.</span></li>
+                    </ol>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Roadmap Section -->
-    <section class="roadmap">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Roadmap</span>
-                <h2 class="section-title">Évolution du projet</h2>
-            </div>
-            <div class="roadmap-timeline">
-                <div class="timeline-item current">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Version 1.0 - Lancement</h3>
-                        <ul>
-                            <li>Bible complète en français</li>
-                            <li>Strong's Concordance intégré</li>
-                            <li>Plans de lecture</li>
-                            <li>Outils d'étude de base</li>
-                            <li>Fonctionnement 100% offline</li>
-                        </ul>
-                    </div>
+        <!-- Feuille de route -->
+        <section class="section section--tint" id="feuille-de-route">
+            <div class="wrap">
+                <div class="head">
+                    <p class="eyebrow">Feuille de route</p>
+                    <h2>Où en est <em>Selah.</em></h2>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Versions futures</h3>
-                        <ul>
-                            <li>Audio Bible en français</li>
-                            <li>Synchronisation cloud (optionnelle)</li>
-                            <li>Communauté et partage de notes</li>
-                            <li>Version Web (PWA)</li>
-                            <li>Traductions additionnelles</li>
-                        </ul>
-                    </div>
-                </div>
+                <ol class="roadmap">
+                    <li class="roadmap__step is-done reveal">
+                        <p class="tag">Disponible en test</p>
+                        <h3>Lire et méditer</h3>
+                        <p>Lecture en plusieurs traductions, comparaison, recherche, méditation guidée, annotations, plans de lecture et statistiques.</p>
+                    </li>
+                    <li class="roadmap__step is-current reveal">
+                        <p class="tag">En cours</p>
+                        <h3>Concordance Strong complète</h3>
+                        <p>Intégration des données de Lueur.org et mots cliquables dans le lecteur. Ressources d’étude : dictionnaire biblique et introductions aux livres.</p>
+                    </li>
+                    <li class="roadmap__step reveal">
+                        <p class="tag">Ensuite</p>
+                        <h3>Aller plus loin</h3>
+                        <p>Rappels de lecture, Bible audio en français, synchronisation optionnelle entre appareils, traductions supplémentaires.</p>
+                    </li>
+                </ol>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Intéressé par le projet ?</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Selah Team</h3>
-                    <p>Application de méditation biblique pour l'Afrique francophone</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="icon">📍</span>
-                            <span>Abidjan, Côte d'Ivoire</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="icon">🌍</span>
-                            <span>Public cible : Afrique de l'Ouest francophone</span>
-                        </div>
-                    </div>
-                    <div class="cta-box">
-                        <h4>Pour Lueur.org</h4>
-                        <p>Si vous souhaitez en savoir plus sur notre projet ou discuter du partenariat, 
-                        nous sommes disponibles pour un échange.</p>
-                    </div>
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="wrap contact">
+                <div class="head">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Échangeons <em>sur le projet.</em></h2>
+                </div>
+                <div class="contact__card card">
+                    <p class="contact__name">Wilfried Da Cruz</p>
+                    <p>Développeur de Selah · Abidjan, Côte d’Ivoire</p>
+                    <p>Pour une démonstration, une version de test ou toute question sur le partenariat, je suis disponible pour un échange.</p>
+                    <a class="pill" href="https://github.com/willdev61" rel="noopener">GitHub · willdev61</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>SELAH</h3>
-                    <p>"Pause. Médite. Transforme."</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">À propos</a>
-                    <a href="#features">Fonctionnalités</a>
-                    <a href="#tech">Technologies</a>
-                    <a href="#partnership">Partenariat</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Selah. Tous droits réservés.</p>
-                <p>Application en développement - Version 1.0 à venir</p>
-            </div>
+        <div class="wrap footer__inner">
+            <a href="#" class="wordmark wordmark--small" aria-label="Selah, retour en haut">
+                <span>Selah</span><i aria-hidden="true"></i><i aria-hidden="true"></i>
+            </a>
+            <p>Application en version de test. © 2026 Selah.</p>
         </div>
     </footer>
 
